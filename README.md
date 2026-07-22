@@ -11,4 +11,5 @@
 - **오류가 반복되면 쿼리가 아니라 데이터 구조를 의심합니다** — 클러스터링 실루엣 0.98이 이상치가 만든 '가짜 분리'임을 발견해 교정 → [health-bab-talk](https://github.com/hwasun-zip/health-bab-talk)
 
 **Skills**: Python · SQL/MySQL · Pandas · scikit-learn
+
 **Certificates**: 빅데이터분석기사 · SQLD · ADsP · 정보처리기사
