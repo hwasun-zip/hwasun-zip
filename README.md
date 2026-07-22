@@ -1,9 +1,11 @@
-## 숫자가 막힌 곳에서 원인을 찾아 검증하는 데이터 분석가입니다
+# 데이터로 의사결정을 돕는 분석가입니다
+숫자가 막힌 곳에서 원인을 찾고, 기준선을 세워 "이 숫자가 정말 맞는가"를 증명합니다.
 
-- 예측 모델 성능이 정체됐을 때 모델 교체 대신 EDA로 돌아가 파생변수를 설계합니다 → [festforecast](https://github.com/hwasun-zip/festforecast)
-- 오류가 반복되면 쿼리가 아니라 데이터 구조를 의심합니다 → [health-bab-talk](https://github.com/hwasun-zip/health-bab-talk)
-- 개선은 지표의 전후 비교로 증명합니다 → [yamyam](https://github.com/hwasun-zip/yamyam)
+예측이 정체되면 모델 대신 데이터로 돌아갑니다 — 축제 방문객 예측에서 날씨 가설을 세웠다가 검증으로 기각하고, 원인(광역 관측소 근사·월 단위 매칭에 의한 신호 희석)까지 규명 → festforecast
+개선은 지표의 전후 비교로 증명합니다 — 날씨 기반 음식 추천에서 무작위 대비 Hit@1 3배(58.8%)를 시점 분할 검증으로 확인 → yamyam
+분석은 실행 가능한 답으로 끝냅니다 — SQL 기반 RFM 세그먼트로 핵심 고객 23.4%가 매출 67.6%를 만든다는 구조를 특정하고, 세그먼트별 액션까지 제안 → rfm-customer-segmentation
+오류가 반복되면 쿼리가 아니라 데이터 구조를 의심합니다 — 클러스터링 실루엣 0.98이 이상치가 만든 '가짜 분리'임을 발견해 교정 → health-bab-talk
 
-**Skills**: Python · SQL/MySQL · Pandas · scikit-learn
+Skills: Python · SQL/MySQL · Pandas · scikit-learn
 
-**Certificates**: 빅데이터분석기사 · 정보처리기사 · SQLD · ADsP
+Certificates: 빅데이터분석기사 · SQLD · ADsP · 정보처리기사
