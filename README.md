@@ -1,10 +1,36 @@
-# 데이터로 의사결정을 돕는 분석가입니다
-숫자가 어긋나는 지점에서 원인을 찾고, 기준선을 세워 "이 숫자가 정말 맞는가"를 증명합니다.
+# hwasun-zip
 
-- **상관을 인과로 착각하지 않습니다** - 예약금 낸 예약의 취소율 99%라는 반전이 리드타임과 채널 편중이 만든 착시임을 밝혀, 섣부른 인과 해석을 기각 → [noshow-radar](https://github.com/hwasun-zip/noshow-radar)
-- **규모만 큰 곳을 정답으로 두지 않습니다** - 매장 수 2위 마포가 성장 정체와 카페 상권 특성으로 진출 우선순위에서 밀림을 규명하고, Opportunity Score로 진출 Top 5 도출 → [matsegwon](https://github.com/hwasun-zip/matsegwon)
-- **개선은 기준선과의 전후 비교로 증명합니다** - 날씨 기반 음식 추천에서 무작위 추천 대비 Hit@1 3배(58.8%)를 시점 분할 검증으로 확인 → [yamyam](https://github.com/hwasun-zip/yamyam)
-- **지표가 흔들리면 집계 전에 '무엇을 세고 있는지'부터 되짚습니다** - 주문 99,441건이 실제로는 96,096명이 낸 것임을 식별자 교정으로 밝혀, 0%에 가깝게 왜곡되던 리텐션을 바로잡음 → [fintech-cohort-funnel-sql](https://github.com/hwasun-zip/fintech-cohort-funnel-sql)
+데이터를 분석하기 전에, 먼저 그 데이터가 무엇을 의미하고 어떻게 만들어졌는지부터 확인합니다.
 
-**Skills**: Python · SQL (DuckDB, SQLite, MySQL) · pandas · scikit-learn · matplotlib · Git
-**Certificates**: 빅데이터분석기사 · SQLD · ADsP · 정보처리기사
+지표를 계산하는 것보다 데이터의 정의, 식별 기준, 구조와 품질을 검증하는 과정을 중요하게 생각합니다. 문제를 발견하면 데이터를 표준화하거나 분석 단위를 재정의하고, 검증 가능한 형태로 만든 뒤 분석을 진행합니다. 아래 프로젝트는 이러한 과정을 기업정보, 고객 데이터, 데이터 품질 검증에 적용한 기록입니다.
+
+---
+
+### "매출액"이라는 단어가 11개의 다른 숫자를 가리켰다
+[FinStandard-EWS](https://github.com/hwasun-zip/FinStandard-EWS) — DART 재무제표 표준화 및 산업 상대지표 기반 부실위험 조기경보 파이프라인
+
+상장기업 2,663곳의 재무제표에서 계정과목 표기 오류와 완전자본잠식 사례를 찾아 표준화하고, 산업별 상대지표를 적용해 부실위험 스코어를 설계했습니다. 실제 부실 사례 184건과 대조한 결과, 위험 스코어 상위 10%가 실제 부실 사례의 52.3%를 포함하는 것을 확인했습니다.
+
+`Python` `pandas` `scikit-learn` `DART Open API`
+
+---
+
+### 재구매하는 고객은 있었는데, 데이터 안에는 없었다
+[FintechCohortFunnel](https://github.com/hwasun-zip/fintech-cohort-funnel-sql) — 이커머스 코호트 리텐션 및 구매 이행 퍼널 분석
+
+주문 단위로 기록된 거래 로그 99,441건을 고객 고유 식별자 기준으로 재구성해 실제 고객 96,096명으로 재정의하고, SQL로 월별 리텐션과 구매 이행 퍼널을 산출했습니다.
+
+`SQL` `SQLite` `Python`
+
+---
+
+### 날씨 변수를 추가했는데, 예측력이 떨어졌다
+[FestForecast](https://github.com/hwasun-zip/festforecast) — 체감기온 변수 기반 지역 축제 방문객 수 예측 (팀 프로젝트)
+
+날씨가 예측력을 개선할 것이라는 가설이 검증 결과 기각되자, 원인을 모델이 아닌 데이터 구조에서 재추적했습니다. 그 과정에서 발견한 이상치를 정제해, 모델 변경 없이 결정계수를 0.48에서 0.79로 개선했습니다.
+
+`Python` `pandas` `scikit-learn`
+
+---
+
+📫 문의: (이메일 또는 연락 가능한 채널을 여기에 적어주세요)
