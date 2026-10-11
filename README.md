@@ -32,3 +32,9 @@
 `Python` `pandas` `scikit-learn`
 
 ---
+
+### 정상으로 기록된 통신 속에 공격이 숨어 있었다
+[SOC-Alert-Triage](https://github.com/hwasun-zip/SOC-Alert-Triage) — SQL 탐지 규칙과 LLM 기반 보안 경보 분류
+
+공개 침입 탐지 데이터 283만 건으로 SQL 탐지 규칙 4개를 만들고, 오탐의 원인을 기준값 대신 데이터 기록 방식에서 찾아 포착률 98.7%를 유지한 채 오탐률을 6.8%에서 3.9%로 낮췄습니다. 남은 오탐을 추적해 라벨이 정상으로 둔 감염 PC의 내부 정찰 6만 4천여 건을 찾았고, LLM의 판정은 MITRE 공식 데이터와 대조해 검증한 뒤 경보 우선순위 분류에 활용했습니다.
+`Python` `DuckDB` `SQL` `Claude API` `MITRE ATT&CK`
