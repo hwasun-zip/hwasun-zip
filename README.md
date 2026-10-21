@@ -33,6 +33,12 @@
 
 ---
 
+### 확신도 '높음'으로 틀린 판정이 그대로 통과하고 있었다
+[Catalog-AutoPilot](https://github.com/hwasun-zip/Catalog-AutoPilot) — Claude API 기반 메뉴 가격 이상치 원인 판단과 검증
+
+SQL 이상탐지가 원인을 가리지 못한 메뉴 가격 이상치를 Claude로 판단하게 하고, 확신도가 높은 정상 판정만 자동 통과시키는 규칙을 설계했습니다. AI 판정을 보기 전에 정답을 먼저 정해 비교하니 틀린 8건 중 7건이 높은 확신도였습니다. 프롬프트를 수정한 뒤 수정에 쓰지 않은 검증 세트 30건에서 자동 통과 오류를 1건에서 0건으로 줄였고, 대신 늘어난 검토 건수(16건에서 21건)도 함께 기록했습니다.
+
+`Python` `SQL` `DuckDB` `Claude API`
 ### 정상으로 기록된 통신 속에 공격이 숨어 있었다
 [SOC-Alert-Triage](https://github.com/hwasun-zip/SOC-Alert-Triage) — SQL 탐지 규칙과 LLM 기반 보안 경보 분류
 
