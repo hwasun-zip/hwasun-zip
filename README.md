@@ -38,9 +38,3 @@
 - **라이브러리**: pandas, NumPy, SciPy, statsmodels, scikit-learn, LightGBM
 - **도구**: Power BI, Google Colab, GitHub, Claude API
 - **분석 방법**: A/B 테스트, 퍼널, 코호트, Uplift Modeling
-
-<br>
-
-## Contact
-
-- Email: your@email.com
