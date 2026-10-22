@@ -1,46 +1,46 @@
-# hwasun-zip
+# 반응이 아닌 효과를 찾는 데이터 분석가 문화선 입니다
 
-데이터를 분석하기 전에, 먼저 그 데이터가 무엇을 의미하고 어떻게 만들어졌는지부터 확인합니다.
+반응이 높은 곳이 아니라 **효과가 생기는 곳**을 찾습니다.
+가설을 세우고, 데이터로 확인하고, 틀렸다면 결론을 바꿉니다.
 
-지표를 계산하는 것보다 데이터의 정의, 식별 기준, 구조와 품질을 검증하는 과정을 중요하게 생각합니다. 문제를 발견하면 데이터를 표준화하거나 분석 단위를 재정의하고, 검증 가능한 형태로 만든 뒤 분석을 진행합니다. 아래 프로젝트는 이러한 과정을 기업정보, 고객 데이터, 데이터 품질 검증에 적용한 기록입니다.
+<br>
 
----
+## 대표 프로젝트
 
-### "매출액"이라는 단어가 11개의 다른 숫자를 가리켰다
-[FinStandard-EWS](https://github.com/hwasun-zip/FinStandard-EWS) — DART 재무제표 표준화 및 산업 상대지표 기반 부실위험 조기경보 파이프라인
+| 프로젝트 | 질문 | 핵심 결과 |
+|---|---|---|
+| [Who-Needs-the-Ad](https://github.com/hwasun-zip/Who-Needs-the-Ad) | 광고가 정말 필요한 유저는 누구인가 | 광고 무작위 실험 데이터로 S, T, X-Learner를 비교해 상위 10%가 증분 방문의 85.8% 차지 |
+| [Cookie_Cats](https://github.com/hwasun-zip/Cookie_Cats) | 이 A/B 테스트 결과를 믿어도 될까 | 배정 비율 이상(SRM)을 발견해 최악의 가정으로 민감도 분석, 리텐션 후속 실험 설계 |
+| [RetailRocket](https://github.com/hwasun-zip/RetailRocket) | 유저는 어디서 떠나고, 누구를 붙잡아야 할까 | 이벤트 로그 275만 건을 SQL로 세션화, 세그먼트 정의 편향을 찾아 결론 재검증 |
 
-상장기업 2,663곳의 재무제표에서 계정과목 표기 오류와 완전자본잠식 사례를 찾아 표준화하고, 산업별 상대지표를 적용해 부실위험 스코어를 설계했습니다. 실제 부실 사례 184건과 대조한 결과, 위험 스코어 상위 10%가 실제 부실 사례의 52.3%를 포함하는 것을 확인했습니다.
+<br>
 
-`Python` `pandas` `scikit-learn` `DART Open API`
+## 이렇게 분석합니다
 
----
+- **반응보다 증분**: 반응할 사람이 아니라, 개입 때문에 행동이 바뀌는 사람을 찾습니다
+- **결론보다 검증**: 결과를 해석하기 전에 실험 배정과 지표 정의부터 확인합니다
+- **로그를 의사결정 지표로**: SQL로 행동 로그를 세션과 퍼널로 바꿔, 판단에 쓸 수 있는 지표를 만듭니다
 
-### 재구매하는 고객은 있었는데, 데이터 안에는 없었다
-[FintechCohortFunnel](https://github.com/hwasun-zip/fintech-cohort-funnel-sql) — 이커머스 코호트 리텐션 및 구매 이행 퍼널 분석
+<br>
 
-주문 단위로 기록된 거래 로그 99,441건을 고객 고유 식별자 기준으로 재구성해 실제 고객 96,096명으로 재정의하고, SQL로 월별 리텐션과 구매 이행 퍼널을 산출했습니다.
+## 다른 프로젝트
 
-`SQL` `SQLite` `Python`
+- [Saving-Temperature](https://github.com/hwasun-zip/Saving-Temperature): 적금 해지 방지를 위험 예측이 아닌 Uplift 타겟팅으로 재설계
+- [FinStandard-EWS](https://github.com/hwasun-zip/FinStandard-EWS): DART 재무제표 표준화와 업종 상대지표 기반 부실위험 스코어링
+- [SOC-Alert-Triage](https://github.com/hwasun-zip/SOC-Alert-Triage): 네트워크 로그 SQL 행위 탐지와 Claude API 기반 경보 트리아지
+- [Catalog-AutoPilot](https://github.com/hwasun-zip/Catalog-AutoPilot): Claude API로 카탈로그 이상치 원인을 자동 판단하고 리포팅
 
----
+<br>
 
-### 날씨 변수를 추가했는데, 예측력이 떨어졌다
-[FestForecast](https://github.com/hwasun-zip/festforecast) — 체감기온 변수 기반 지역 축제 방문객 수 예측 (팀 프로젝트)
+## Skills
 
-날씨가 예측력을 개선할 것이라는 가설이 검증 결과 기각되자, 원인을 모델이 아닌 데이터 구조에서 재추적했습니다. 그 과정에서 발견한 이상치를 정제해, 모델 변경 없이 결정계수를 0.48에서 0.79로 개선했습니다.
+- **언어**: SQL, Python
+- **라이브러리**: pandas, NumPy, SciPy, statsmodels, scikit-learn, LightGBM
+- **도구**: Power BI, Google Colab, GitHub, Claude API
+- **분석 방법**: A/B 테스트, 퍼널, 코호트, Uplift Modeling
 
-`Python` `pandas` `scikit-learn`
+<br>
 
----
+## Contact
 
-### 확신도 '높음'으로 틀린 판정이 그대로 통과하고 있었다
-[Catalog-AutoPilot](https://github.com/hwasun-zip/Catalog-AutoPilot) — Claude API 기반 메뉴 가격 이상치 원인 판단과 검증
-
-SQL 이상탐지가 원인을 가리지 못한 메뉴 가격 이상치를 Claude로 판단하게 하고, 확신도가 높은 정상 판정만 자동 통과시키는 규칙을 설계했습니다. AI 판정을 보기 전에 정답을 먼저 정해 비교하니 틀린 8건 중 7건이 높은 확신도였습니다. 프롬프트를 수정한 뒤 수정에 쓰지 않은 검증 세트 30건에서 자동 통과 오류를 1건에서 0건으로 줄였고, 대신 늘어난 검토 건수(16건에서 21건)도 함께 기록했습니다.
-
-`Python` `SQL` `DuckDB` `Claude API`
-### 정상으로 기록된 통신 속에 공격이 숨어 있었다
-[SOC-Alert-Triage](https://github.com/hwasun-zip/SOC-Alert-Triage) — SQL 탐지 규칙과 LLM 기반 보안 경보 분류
-
-공개 침입 탐지 데이터 283만 건으로 SQL 탐지 규칙 4개를 만들고, 오탐의 원인을 기준값 대신 데이터 기록 방식에서 찾아 포착률 98.7%를 유지한 채 오탐률을 6.8%에서 3.9%로 낮췄습니다. 남은 오탐을 추적해 라벨이 정상으로 둔 감염 PC의 내부 정찰 6만 4천여 건을 찾았고, LLM의 판정은 MITRE 공식 데이터와 대조해 검증한 뒤 경보 우선순위 분류에 활용했습니다.
-`Python` `DuckDB` `SQL` `Claude API` `MITRE ATT&CK`
+- Email: your@email.com
